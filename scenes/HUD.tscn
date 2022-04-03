@@ -1,0 +1,80 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/Font/theme_game.tres" type="Theme" id=1]
+[ext_resource path="res://assets/Font/theme_message.tres" type="Theme" id=2]
+[ext_resource path="res://assets/Font/theme_number.tres" type="Theme" id=3]
+[ext_resource path="res://HUD.gd" type="Script" id=4]
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource( 4 )
+
+[node name="ScoreMessage" type="Label" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -140.0
+margin_top = 6.0
+margin_right = -43.0
+margin_bottom = 52.0
+theme = ExtResource( 1 )
+text = "SCORE :"
+
+[node name="Score" type="Label" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -40.0
+margin_bottom = 49.0
+theme = ExtResource( 3 )
+text = "0"
+align = 1
+valign = 1
+
+[node name="GameMessage" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -58.0
+margin_top = -23.0
+margin_right = 58.0
+margin_bottom = 23.0
+theme = ExtResource( 2 )
+text = "SURVIVE"
+align = 1
+valign = 1
+
+[node name="StartButton" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -50.5
+margin_top = -52.0
+margin_right = 50.5
+theme = ExtResource( 1 )
+text = "start"
+
+[node name="RestartButton" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -62.0
+margin_top = 42.0
+margin_right = 68.0
+margin_bottom = 94.0
+theme = ExtResource( 2 )
+text = "restart"
+
+[node name="MessageTimer" type="Timer" parent="."]
+wait_time = 1.5
+one_shot = true
+
+[node name="Label" type="Label" parent="."]
+margin_left = 8.0
+margin_top = 5.0
+margin_right = 162.0
+margin_bottom = 19.0
+text = "Use key arrows to move"
+
+[connection signal="pressed" from="StartButton" to="." method="_on_StartButton_pressed"]
+[connection signal="pressed" from="RestartButton" to="." method="_on_RestartButton_pressed"]
