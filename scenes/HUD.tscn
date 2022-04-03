@@ -3,7 +3,7 @@
 [ext_resource path="res://assets/Font/theme_game.tres" type="Theme" id=1]
 [ext_resource path="res://assets/Font/theme_message.tres" type="Theme" id=2]
 [ext_resource path="res://assets/Font/theme_number.tres" type="Theme" id=3]
-[ext_resource path="res://HUD.gd" type="Script" id=4]
+[ext_resource path="res://Scripts/HUD.gd" type="Script" id=4]
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource( 4 )
