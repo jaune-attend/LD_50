@@ -48,7 +48,7 @@ func spawn_enemy():
 func collect_star():
 	score += 1
 	var i = 0
-	if score < 6:
+	if score < 11:
 		invoke_star()
 		while i < score:
 			i += 1
